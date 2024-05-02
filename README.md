@@ -17,18 +17,49 @@ The focus of this library is to provide a common "DSL" for DOM manipulation. It 
 
 ## How to use?
 
-## How to install?
+### createElementHTML
 
-npm
-
-```sh
-npm install
 ```
+js
+
+  const app = document.querySelector("#app");
+
+  const createElement = createElementHTML();
+
+  const p = createElement.createTag({
+    id: "error",
+    className: "bad__request",
+    tagName: "p",
+    content: "Page Not Found 404",
+    valueAttribute: true,
+  });
+
+  const button = createElement.createTag({
+    id: "btn_submit",
+    className: "btn__green",
+    tagName: "button",
+    content: "Create User",
+    attribute: "type",
+    valueAttribute: "submit",
+    });
+
+  app.appendChild(p);
+  app.appendChild(button);
+
+```
+
+## How to install?
 
 pnpm
 
 ```sh
 npm install
+```
+
+## Run Test
+
+```sh
+pnpm test
 ```
 
 ## 🚀 About me
