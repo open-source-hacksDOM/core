@@ -5,11 +5,26 @@ function core() {
 
   const createElement = createElementHTML();
 
-  let element = createElement.createTag("p", "teste");
+  const p = createElement.createTag({
+    id: "teste",
+    className: "hidden",
+    tagName: "p",
+    content: "Teste 2",
+    attribute: "disabled",
+    valueAttribute: true,
+  });
 
-  app.appendChild(element);
+  const button = createElement.createTag({
+    id: "teste",
+    className: "btn",
+    tagName: "button",
+    content: "Clique aqui",
+    attribute: "type",
+    valueAttribute: "submit",
+  });
 
-  console.log(element);
+  app.appendChild(p);
+  app.appendChild(button);
 }
 
 core();

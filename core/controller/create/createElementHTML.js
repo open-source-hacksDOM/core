@@ -1,10 +1,22 @@
 function createElementHTML() {
-  function createTag(tagName, content, attribute, className, id) {
+  function createTag({
+    tagName: tagName,
+    content: content,
+    attribute: attribute,
+    valueAttribute: valueAttribute,
+    className: className,
+    id: id,
+  }) {
     const tag = document.createElement(tagName);
 
-    tag.innerText = content;
+    if (content) tag.innerText = content;
 
-    tag.classList.add(className);
+    if (className) tag.classList.add(className);
+
+    if (attribute && valueAttribute)
+      tag.setAttribute(attribute, valueAttribute);
+
+    if (id) tag.setAttribute("id", id);
 
     return tag;
   }
