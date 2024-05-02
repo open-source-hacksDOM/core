@@ -1,11 +1,11 @@
-function createElementHTML() {
+function createElementHTML(parent) {
   function createTag({
-    tagName: tagName,
-    content: content,
-    attribute: attribute,
-    valueAttribute: valueAttribute,
-    className: className,
-    id: id,
+    tagName,
+    content,
+    attribute,
+    valueAttribute,
+    className,
+    id,
   }) {
     const tag = document.createElement(tagName);
 
@@ -17,6 +17,8 @@ function createElementHTML() {
       tag.setAttribute(attribute, valueAttribute);
 
     if (id) tag.setAttribute("id", id);
+
+    if (parent) return parent.appendChild(tag);
 
     return tag;
   }

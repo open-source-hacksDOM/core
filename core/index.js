@@ -3,9 +3,9 @@ import createElementHTML from "./controller/create/createElementHTML";
 function core() {
   const app = document.querySelector("#app");
 
-  const createElement = createElementHTML();
+  const createElement = createElementHTML(app);
 
-  const p = createElement.createTag({
+  createElement.createTag({
     id: "teste",
     className: "hidden",
     tagName: "p",
@@ -14,7 +14,7 @@ function core() {
     valueAttribute: true,
   });
 
-  const button = createElement.createTag({
+  createElement.createTag({
     id: "teste",
     className: "btn",
     tagName: "button",
@@ -22,9 +22,6 @@ function core() {
     attribute: "type",
     valueAttribute: "submit",
   });
-
-  app.appendChild(p);
-  app.appendChild(button);
 }
 
 core();
