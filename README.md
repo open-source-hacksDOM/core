@@ -24,7 +24,7 @@ js
 
   const app = document.querySelector("#app");
 
-  const createElement = createElementHTML();
+  const createElement = createElementHTML(app);
 
   const p = createElement.createTag({
     id: "error",
@@ -42,10 +42,6 @@ js
     attribute: "type",
     valueAttribute: "submit",
     });
-
-  app.appendChild(p);
-  app.appendChild(button);
-
 ```
 
 ## How to install?
