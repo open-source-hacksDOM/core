@@ -5,7 +5,7 @@ The focus of this library is to provide a common "DSL" for DOM manipulation. It 
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-## Stack utilizada
+## Stack
 
 **Front-end:** Vanilla.js
 
@@ -21,6 +21,9 @@ The focus of this library is to provide a common "DSL" for DOM manipulation. It 
 
 ```
 js
+
+  //import module in your script
+  import createElementHTML from "@/createElementHTML";
 
   const app = document.querySelector("#app");
 
