@@ -4,6 +4,9 @@ Why do I use a library to manipulate my DOM?
 The focus of this library is to provide a common "DSL" for DOM manipulation. It doesn't matter if the platform is mobile or web. Easily add classes to your components. Create HTML elements and easily manipulate your DOM tree.
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+![Static Badge](https://img.shields.io/badge/dimascamillo-open_source_hacksDOM-blue)
+
+
 
 ## Stack
 
