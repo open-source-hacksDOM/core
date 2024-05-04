@@ -25,11 +25,11 @@ js
   //import module in your script
   import createElementHTML from "@/createElementHTML";
 
-  const app = document.querySelector("#app");
+  const { createTag } = document.querySelector("#app");
 
   const createElement = createElementHTML(app);
 
-  const p = createElement.createTag({
+  const p = createTag({
     id: "error",
     className: "bad__request",
     tagName: "p",
@@ -37,7 +37,7 @@ js
     valueAttribute: true,
   });
 
-  const button = createElement.createTag({
+  const button = createTag({
     id: "btn_submit",
     className: "btn__green",
     tagName: "button",

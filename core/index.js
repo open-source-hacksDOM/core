@@ -4,11 +4,11 @@ import classComponents from "./controller/update/classComponents";
 function core() {
   const app = document.querySelector("#app");
 
-  const createElement = createElementHTML(app);
+  const { createTag } = createElementHTML(app);
 
-  const updateComponents = classComponents();
+  const { addClass, removeClass, conditionalClass } = classComponents();
 
-  const p = createElement.createTag({
+  const p = createTag({
     id: "teste",
     className: "hidden",
     tagName: "p",
@@ -17,7 +17,7 @@ function core() {
     valueAttribute: true,
   });
 
-  const btn = createElement.createTag({
+  const btn = createTag({
     id: "teste",
     className: "btn",
     tagName: "button",
@@ -26,9 +26,9 @@ function core() {
     valueAttribute: "submit",
   });
 
-  updateComponents.addClass(p, ["error", "sucess", "disabled", "hidden"]);
-  updateComponents.removeClass(p, ["error", "hidden"]);
-  updateComponents.conditionalClass(p, ["error", "easy"]);
+  addClass(p, ["error", "sucess", "disabled", "hidden"]);
+  removeClass(p, ["error", "hidden"]);
+  conditionalClass(p, ["error", "easy"]);
 }
 
 core();
